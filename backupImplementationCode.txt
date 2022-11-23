@@ -1,0 +1,26 @@
+counter = 0
+
+while counter != 3:
+    user_input = str(input("enter 'c' or 'b' or 'e':"))
+    if user_input == 'c' or user_input == 'b':
+        counter = counter + 1
+        W = int(input("enter the width:"))
+        L = int(input('enter the length:'))
+        H = int(input('enter the height:'))
+        V = W * H * L
+        S_A = 2 * H + W + 2 * H * L + 2 * W * L
+        ve = 'Volume is:'
+        se = 'SurfaceArea is:'
+        print(ve + str(V))
+        print(se + str(S_A))
+        if counter == 3:
+            c = str(input("type 'yes' if you would like to continue?:"))
+            if c == 'yes':
+                counter = 0
+            else:
+                print("your calculation is complete!")
+
+    elif user_input == 'e':
+        counter = 0
+    else:
+        print("invalid entry")
